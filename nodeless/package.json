@@ -1,0 +1,30 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "description": "Serverless com NodeJS e AWS Lambda",
+  "main": "index.js",
+  "scripts": {
+    "predeploy": "rm -rf node_modules/sharp && npm install --platform=linux --arch=x64 --target=8.10.0 sharp",
+    "deploy": "serverless deploy -v",
+    "postdeploy": "rm -rf node_modules/sharp && npm install sharp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardogerentklein/serverless.git"
+  },
+  "keywords": [
+    "Serverless",
+    "AWS",
+    "Lambda",
+    "NodeJS"
+  ],
+  "author": "Eduardo Klein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eduardogerentklein/serverless/issues"
+  },
+  "homepage": "https://github.com/eduardogerentklein/serverless#readme",
+  "dependencies": {
+    "sharp": "^0.26.3"
+  }
+}
